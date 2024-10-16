@@ -1,5 +1,5 @@
 ---
-title: "Teil I - Grundlagen"
+title: "Teil I - Erste Grundlagen"
 subtitle: "Grundlagen der Datenanalyse und Statistik mit R | WS 2024/25"
 author: "Prof. Dr. Daniel Schnitzlein"
 footer: "GitHub-Repo: <https://github.com/dschnitzlein/GDSR_1_Part_1/>"
@@ -62,16 +62,20 @@ Alle Termine finden **online** via **Zoom** statt. Der Link wird rechtzeitig vor
 <br>
 
 ::: {.column width="100%"}
-| Uhrzeit       | Thema      | Thema | Raum            |
-|---------------|:-----------|------:|-----------------|
-| 08:00 - 09:30 | Block 1    |    NN | Hauptraum       |
-| 09:45 - 11:15 | Hands-On 1 |    NN | Break-Out Räume |
-| 11:30 - 12:15 | Block 2    |    NN | Hauptraum       |
+| Uhrzeit       | Titel   |            Thema | Raum            |
+|---------------|:--------|-----------------:|-----------------|
+| 08:00 - 09:30 | Block 1 |           Teil I | Hauptraum       |
+| 09:45 - 11:15 | Block 2 | Teil I / Übung I | Break-Out Räume |
+| 11:30 - 12:15 | Block 3 |          Übung I | Hauptraum       |
 :::
 
 ## RStudio ist die bevorzugte IDE für R
 
 ![](images/Screen1.png){fig-align="center"}
+
+## In diesem ersten Teil arbeiten wir nur interaktiv in der R-Konsole
+
+![](images/Screen2.png){fig-align="center"}
 
 ## R als Taschenrechner und Objekte
 
@@ -257,7 +261,7 @@ x
 
 <br>
 
-Die `plot()` Funktion ist der einfachste (und direkteste) Weg Daten in `R` zu plotten. Z.B. `plot(x, y)` ergibt einen Scatterplot der Daten in `x` und `y`. Bitte beachten Sie, die `plot()` Funktion ist vor allem in der Analysephase wichtig und hilfreich. Die Abbildungen sind in der Regel **nicht** hübsch im Sinne von **publikationsreif**. Eine große Stärke von `R` ist es jedoch auch publikationsreife Abbildungen erstellen zu können. Im Regelfall verwenden Sie hierfür aber dann das Paket `ggplot2`. 
+Die `plot()` Funktion ist der einfachste (und direkteste) Weg Daten in `R` zu plotten. Z.B. `plot(x, y)` ergibt einen Scatterplot der Daten in `x` und `y`. Bitte beachten Sie, die `plot()` Funktion ist vor allem in der Analysephase wichtig und hilfreich. Die Abbildungen sind in der Regel **nicht** hübsch im Sinne von **publikationsreif**. Eine große Stärke von `R` ist es jedoch auch publikationsreife Abbildungen erstellen zu können. Im Regelfall verwenden Sie hierfür aber dann das Paket `ggplot2`.
 
 Das Erstellen von solchen Abbildungen wird später im Seminar ein eigener Schwerpunktblock sein.
 
@@ -271,8 +275,7 @@ plot(x, y)
 
 <br>
 
-Die `plot()` Funktion bietet viele zusätzliche Optionen, z.B. das Argument `xlab` um die $x$-Achse zu beschriften. Wie immer finden Sie
-mehr Details via `?plot`.
+Die `plot()` Funktion bietet viele zusätzliche Optionen, z.B. das Argument `xlab` um die $x$-Achse zu beschriften. Wie immer finden Sie mehr Details via `?plot`.
 
 <br>
 
@@ -306,8 +309,7 @@ dev.off()
 
 <br>
 
-Die Funktion `dev.off()` zeigt `R` an, dass wir mit der Erstellung des Plot fertig sind (und dieser gespeichert wird). Alternativ können wir
-die Abbildung einfach kopieren und in ein Word-Dokument, eine Powerpoint-Präsentation etc., einfügen. Bitte beachten Sie: Der obige Code funktioniert nur in RStudio, nicht auf den Folien, da Sie in den Folien nicht speichern können.
+Die Funktion `dev.off()` zeigt `R` an, dass wir mit der Erstellung des Plot fertig sind (und dieser gespeichert wird). Alternativ können wir die Abbildung einfach kopieren und in ein Word-Dokument, eine Powerpoint-Präsentation etc., einfügen. Bitte beachten Sie: Der obige Code funktioniert nur in RStudio, nicht auf den Folien, da Sie in den Folien nicht speichern können.
 
 ## Daten auswählen (1)
 
@@ -333,7 +335,6 @@ das Element in der zweiten Reihe und dritten Spalte ausgewählt werden. Die erst
 ## Daten auswählen (2)
 
 <br>
-
 
 ```{webr}
 A[c(1, 3), c(2, 4)]
@@ -379,19 +380,136 @@ dim(A)
 
 <br>
 
-**Bitte beachten Sie:** Wenn Sie umfangreichere Datenoperationen durchführen wollen oder komplexere Variablen generieren wollen, ist es sinnvoll auf die Funktionalität der `tidyverse`
-(`https://www.tidyverse.org`) Pakete zurückzugreifen. 
+**Bitte beachten Sie:** Wenn Sie umfangreichere Datenoperationen durchführen wollen oder komplexere Variablen generieren wollen, ist es sinnvoll auf die Funktionalität der `tidyverse` (`https://www.tidyverse.org`) Pakete zurückzugreifen.
 
 <br>
 
 Wir werden hier im Kurs dazu ebenfalls einen Schwerpunkttermin machen.
 
-
-## Daten auswählen (4)
+## Daten von externen Quellen einladen (1)
 
 <br>
+
+Für die meisten Analysen ist der erste Schritt der Import eines neuen (externen) Datensatzes in `R`. Die Funktion `read.table()` ist eine wichtige (wenn auch nicht die einzige) Möglichkeit, dies zu tun. Wie immer finden Sie mehr Informationen unter `?read.table`. Je nach Format des Datensatzes können/müssen Sie auch die Funktionen `read.csv`, `read.excel` oder `heaven` nutzen.
+
+Bevor wir versuchen, einen Datensatz zu laden, müssen wir sicherstellen, dass `R` nach den Daten im richtigen Verzeichnis suchen kann. Die Einzelheiten der Vorgehensweise hängen jedoch vom verwendeten Betriebssystem (z. B. Windows, Mac, Linux) ab, so dass wir hier nicht weiter darauf eingehen.
+
+In der Praxis ist es am einfachsten, wenn Sie den Datensatz beim ersten Mal via des Menüs in `RStudio` einlesen und sich den dabei generierten Code anzeigen lassen.
+
+## Daten von externen Quellen einladen (2)
+
+<br>
+
+Wir beginnen mit dem Laden des Datensatzes `Auto.data`. Um die Funktion `read.table()` zu veranschaulichen, laden wir diesen nun aus einer Textdatei, `Auto.data`, die Sie auf StudOn/Github finden.
+
+Der folgende Befehl lädt die Datei `Auto.data` in `R` und speichert sie als Objekt namens `Auto` in einem Format, das als `DataFrame` bezeichnet wird. Sobald die Daten geladen sind, kann die Funktion `View()` verwendet werden, um sie in einem Excel-ähnlichen Fenster in RStudio anzuzeigen. Alternativ können wir mit `head()` die ersten Zeilen anzeigen lassen.
 
 ```{webr}
 Auto <- read.table("data/Auto.data")
 head(Auto)
+```
+
+. . .
+
+Beachten Sie, dass `Auto.data` einfach eine Textdatei ist, die Sie alternativ auf Ihrem Computer mit einem Standard-Texteditor öffnen können. Es ist oft eine gute Idee, einen Datensatz mit einem Texteditor oder einer anderen Software wie Excel anzusehen, bevor man ihn in `R` lädt.
+
+## Daten von externen Quellen einladen (3)
+
+<br>
+
+Dieser spezielle Datensatz wurde z.B. nicht korrekt geladen, weil `R` angenommen hat, dass die Variablennamen Teil der Daten sind und sie daher in die erste Zeile aufgenommen hat. Der Datensatz enthält auch eine Reihe fehlender Beobachtungen, die durch ein Fragezeichen `?` gekennzeichnet sind. Fehlende Werte sind in realen Datensätzen häufig anzutreffen. Die Verwendung der Option `header = T` (oder `header = TRUE`) in der Funktion `read.table()` sagt `R`, dass die erste Zeile der Datei die Variablennamen enthält, und die Verwendung der Option `na.strings` sagt `R`, dass jedes Mal, wenn es ein bestimmtes Zeichen (z.B. ein Fragezeichen) sieht, dieses Element als fehlendes Element in der Datenmatrix behandelt werden soll.
+
+```{webr}
+Auto <- read.table("data/Auto.data", header = T, na.strings = "?", stringsAsFactors = T)
+head(Auto)
+```
+
+## Daten von externen Quellen einladen (4)
+
+<br>
+
+Das Argument `stringsAsFactors = T` teilt `R` mit, dass jede Variable, die (nicht-numerische) Zeichen enthält, als qualitative Variable interpretiert werden soll und dass jede einzelne Zeichenkombination eine Einheit für diese qualitative Variable darstellt.
+
+Mit der `dim()` Funktion können wir ermitteln, dass der Datensatz $397$ Beobachtungen (Zeilen) und 9 Variablen (Spalten) hat.
+
+```{webr}
+dim(Auto)
+```
+
+## Das Arbeitsverzeichnis
+
+<br>
+
+....
+
+## Erste Aufbereitung: Fehlende Werte
+
+<br>
+
+Es gibt verschiedene Wege mit fehlenden Werten umzugehen. In unserem Beispiel enthalten 5 Beobachtungen fehlende Werte. Daher nutzen wir die `na.omit()` Funktion und löschen diese Beobachtungen. Wir werden uns später im mit alternativen Wegen beschäftigen.
+
+```{webr}
+Auto <- na.omit(Auto)
+dim(Auto)
+```
+
+. . .
+
+<br>
+
+Wir können nun `names()` nutzen um die Variablennamen (Spaltennamen) anzuzeigen.
+
+<br>
+
+```{webr}
+names(Auto)
+```
+
+## Grafische Zusammenfassung (1)
+
+<br>
+
+Wie oben können wir die Funktion `plot()` verwenden, um Streudiagramme für die quantitativen Variablen zu erstellen. Die einfache Eingabe der Variablennamen führt jedoch zu einer Fehlermeldung, da `R` nicht weiß, wo diese Variablen gesucht werden sollen.
+
+Um auf eine Variable zu verweisen, müssen wir den Datensatz und den Variablennamen zusammen mit einem `$`-Symbol eingeben. Alternativ könnten wir die Funktion `attach()` verwenden, um `R` anzuweisen, die Variablen in diesem `DataFrame` nur über ihren Namen verfügbar zu machen. Das ist aber, speziell wenn man mit mehreren `DataFrame` gleichzeitig arbeitet, sehr fehleranfällig und sollte vermieden werden.
+
+<br>
+
+```{webr}
+plot(Auto$cylinders, Auto$mpg)
+```
+
+## Grafische Zusammenfassung (2)
+
+<br>
+
+Die Variable `cylinders` ist als numerischer Vektor definiert, daher hat `R` sie auch so verwendet. Allerdings ist es hier inhaltlich sinnvoll `cylinders` als qualitative Variable zu verwenden (Faktor). Die Funktion `as.factor()` konvertiert quantitative Variablen in qualitative Variablen.
+
+Wenn die angegebene Variable für die $x$-Achse qualitativ ist, dann gibt `plot()` automatisch Boxplots statt Streudiagramme aus. Wie immer gibt es unter `?plot()` viele Optionen um die Abbildungen anzupassen.
+
+<br>
+
+```{webr}
+Auto$cylinders <- as.factor(Auto$cylinders)
+plot(Auto$cylinders, Auto$mpg, col = "red", xlab = "cylinders", ylab = "MPG")
+```
+
+## Numerische Zusammenfassung
+
+<br>
+
+Mit der `summary()` Funktion können wir deskriptive Statistiken eines gesamten Datensatzes anzeigen lassen ...
+
+<br>
+
+```{webr}
+summary(Auto)
+```
+
+<br>
+
+... oder nur einer einzelnen Variablen.
+
+```{webr}
+summary(Auto$mpg)
 ```

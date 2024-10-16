@@ -2,155 +2,218 @@
   {
     "objectID": "Part_1.html#seminarablauf",
     "href": "Part_1.html#seminarablauf",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Seminarablauf",
     "text": "Seminarablauf\n \n\n\n\n\nDatum\nUhrzeit\nThema\n\n\n\n\n18. Oktober 2024\n08:00 - 12:15 Uhr\nTermin 1\n\n\n22. November 2024\n08:00 - 12:15 Uhr\nTermin 2\n\n\n06. Dezember 2024\n08:00 - 12:15 Uhr\nTermin 3\n\n\n10. Januar 2025\n08:00 - 12:15 Uhr\nTermin 4\n\n\n17. Januar 2025\n08:00 - 10:00 Uhr (?)\nTermin 5\n\n\n\n\nAlle Termine finden online via Zoom statt. Der Link wird rechtzeitig vor dem jeweiligen Termin bereitgestellt. Nach jedem Termin wird es ein Problem Set (Hausaufgabe) geben, das bis zum nächsten Termin bearbeitet werden muss. Die Abgabe der Hausaufgaben ist Voraussetzung für die Bescheinigung der Kursteilnahme."
   },
   {
     "objectID": "Part_1.html#vorläufige-themenliste",
     "href": "Part_1.html#vorläufige-themenliste",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "(Vorläufige) Themenliste",
     "text": "(Vorläufige) Themenliste\n\n\n\nEinführung in R und R-Studio: Überblick über die Installations- und Einrichtungsprozesse | Grundlegende Funktionen und Bedienung von R und RStudio\nGrundlagen der Statistiksprache R: Syntax und Datenstrukturen in R | Einführung in Funktionen und Pakete\nDatenmanagement in R: Methoden der Datenorganisation und -vorbereitung | Importieren, Bereinigen und Transformieren von Datensätzen\nEinführung in die Pakete des tidyverse: Überblick über die wichtigsten tidyverse-Pakete wie z.B. dplyr und ggplot2 | Anwendung dieser Pakete zur effizienten Datenanalyse und -visualisierung\nDeskriptive Statistik in R: Berechnung und Interpretation grundlegender statistischer Kennzahlen | Anwendung von deskriptiven Methoden zur Datenexploration | Einführung in die statistische Modellierung am Beispiel linearer Modelle\nDatenvisualisierung in R: Erstellen von publikationsreifen Grafiken und Diagrammen mit ggplot2 | Gestaltung und Interpretation von Datenvisualisierungen zur Unterstützung der Datenanalyse"
   },
   {
     "objectID": "Part_1.html#tagesablauf",
     "href": "Part_1.html#tagesablauf",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Tagesablauf",
-    "text": "Tagesablauf\n\n\n\n\n\n\nUhrzeit\nThema\nThema\nRaum\n\n\n\n\n08:00 - 09:30\nBlock 1\nNN\nHauptraum\n\n\n09:45 - 11:15\nHands-On 1\nNN\nBreak-Out Räume\n\n\n11:30 - 12:15\nBlock 2\nNN\nHauptraum"
+    "text": "Tagesablauf\n\n\n\n\n\n\nUhrzeit\nTitel\nThema\nRaum\n\n\n\n\n08:00 - 09:30\nBlock 1\nTeil I\nHauptraum\n\n\n09:45 - 11:15\nBlock 2\nTeil I / Übung I\nBreak-Out Räume\n\n\n11:30 - 12:15\nBlock 3\nÜbung I\nHauptraum"
   },
   {
     "objectID": "Part_1.html#rstudio-ist-die-bevorzugte-ide-für-r",
     "href": "Part_1.html#rstudio-ist-die-bevorzugte-ide-für-r",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "RStudio ist die bevorzugte IDE für R",
     "text": "RStudio ist die bevorzugte IDE für R"
   },
   {
+    "objectID": "Part_1.html#in-diesem-ersten-teil-arbeiten-wir-nur-interaktiv-in-der-r-konsole",
+    "href": "Part_1.html#in-diesem-ersten-teil-arbeiten-wir-nur-interaktiv-in-der-r-konsole",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "In diesem ersten Teil arbeiten wir nur interaktiv in der R-Konsole",
+    "text": "In diesem ersten Teil arbeiten wir nur interaktiv in der R-Konsole"
+  },
+  {
     "objectID": "Part_1.html#r-als-taschenrechner-und-objekte",
     "href": "Part_1.html#r-als-taschenrechner-und-objekte",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "R als Taschenrechner und Objekte",
     "text": "R als Taschenrechner und Objekte\n\nIn der einfachsten Anwendung können Sie R im interaktiven Gebrauch als Taschenrechner nutzen:\n\n\n\n\n\n\n\n\n\nMit dem Operator &lt;- weisen Sie R an, das Ergebnis des Ausdrucks der rechts des Operators steht in dem Objekt abzulegen (und ggf. das Objekt zu erzeugen), das links vom Operator steht.\n\n\n\n\n\n\n\n\n\n\nIn diesem Fall wird das Ergebnis von 1 + 3 in dem Objekt ergebnis abgelegt. Um den Inhalt eines Projekts anzuzeigen, müssen Sie (in den allermeisten Fällen) einfach den Namen des Objekts eingeben. Ist das Objekt komplexer (Modellergebnisse etc.) kann es sein, dass Sie explizit angeben müssen, dass das Objekt angezeigt werden soll print(Objekt)."
   },
   {
     "objectID": "Part_1.html#funktionen",
     "href": "Part_1.html#funktionen",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Funktionen",
     "text": "Funktionen\n\nR verwendet Funktionen um Operationen durchzuführen. Um eine Funktion namens Funktionsname auszuführen, geben wir Funktionsname(Eingabe1, Eingabe2, ...) ein, wobei die Eingaben (oder Argumente) Eingabe1 und Eingabe2 R mitteilen, wie die Funktion ausgeführt werden soll. Eine Funktion kann eine beliebige Anzahl von Eingaben haben. Um zum Beispiel einen Zahlenvektor aus einzelnen Zahlen zu erzeugen, verwenden wir die Funktion c(), der alle Zahlen innerhalb der Klammern zusammenfügt.\n\nDer folgende Befehl weist R an, die Zahlen 1, 3, 2 und 5 zusammenzufügen und als einen Vektor mit dem Namen x zu speichern. Wenn wir x eintippen, bekommen Sie den Vektor als Ergebnis angezeigt."
   },
   {
     "objectID": "Part_1.html#wo-bekomme-ich-hilfe",
     "href": "Part_1.html#wo-bekomme-ich-hilfe",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Wo bekomme ich Hilfe?",
     "text": "Wo bekomme ich Hilfe?\n\nWenn Sie mehr Informationen über eine bestimmte Funktion erfahren möchten, tippen Sie auf der Konsole ?Funktionsname ein. Wir können R anweisen, zwei Zahlenvektoren zu addieren. R addiert dann die erste Zahl von x zur ersten Zahl von y und so weiter. Allerdings müssen x und y die gleiche Länge haben. Wir können ihre Länge mit der Funktion length() überprüfen."
   },
   {
     "objectID": "Part_1.html#objekte",
     "href": "Part_1.html#objekte",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Objekte",
     "text": "Objekte\n\nR arbeitet mit Objekten. Mit der Funktion ls() können wir eine Liste aller bisher geladenen Objekte, wie z.B. Daten und Funktionen, anzeigen. Mit der Funktion rm() kann man alle Objekte löschen, die nicht mehr benötigt werden. Dies kann u.a. zur Speicheroptimierung sehr hilfreich sein.\n\n\n\n\n\n\n\n\n\nSie können auch alle Objekte auf einmal löschen."
   },
   {
     "objectID": "Part_1.html#matrizen",
     "href": "Part_1.html#matrizen",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Matrizen",
     "text": "Matrizen\n\nDie matrix() Funktion erstellt eine Matrix von Zahlen. Das Hilfe-File (?matrix) listet, dass die Funktion eine ganze Reihe von Argumenten akzeptiert. Wir fokussieren allerdings auf die ersten drei: Die Daten (Einträge in der Matrix), die Anzahl der Zeilen und die Anzahl der Spalten. Wir starten mit einer einfachen Matrix.\n\n\n\n\n\n\n\n\n\nHinweis: Die Zusätze data=, nrow=, und ncol= in der matrix() Funktion sind nicht unbedingt notwendig aber machen den Code lesbarer. Probieren Sie es einfach aus!"
   },
   {
     "objectID": "Part_1.html#reihenfolge-der-argumente-in-einer-funktion",
     "href": "Part_1.html#reihenfolge-der-argumente-in-einer-funktion",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Reihenfolge der Argumente in einer Funktion",
     "text": "Reihenfolge der Argumente in einer Funktion\n\nOft kann es allerdings hilfreich sein, die Namen der übergebenen Argumente anzugeben, da R sonst davon ausgeht, dass die Funktionsargumente in der gleichen Reihenfolge an die Funktion übergeben werden, wie sie in der Hilfedatei der Funktion angegeben sind. Im obigen Beispiel erstellt R standardmäßig Matrizen, indem es nacheinander die Spalten ausfüllt. Alternativ kann die Option byrow = TRUE verwendet werden, um die Matrix in der Reihenfolge der Zeilen aufzufüllen.\n\nProbieren Sie es aus:\n\n\n\n\n\n\n\n\n\n\nBeachten Sie, dass wir im obigen Befehl die Matrix nicht einem Objekt wie x zugewiesen haben. In diesem Fall wird die Matrix auf dem Bildschirm ausgegeben, aber nicht für zukünftige Berechnungen gespeichert."
   },
   {
     "objectID": "Part_1.html#wichtige-funktionen-1",
     "href": "Part_1.html#wichtige-funktionen-1",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Wichtige Funktionen (1)",
     "text": "Wichtige Funktionen (1)\n\nDie Funktion rnorm() erzeugt einen Vektor von standardnormalverteilten Zufallszahlen, wobei das erste Argument n der Stichprobenumfang ist. Jedes Mal wenn wir diese Funktion aufrufen, erhalten wir eine andere Antwort. Hier bilden wir zwei korrelierte Mengen von Zahlen, x und y, und verwenden die Funktion cor(), um die Korrelation zwischen ihnen zu berechnen. Wenn Sie den Code mehrfach ausführen, sehen Sie, dass sich die Ergebnisse verändern.\n\n\n\n\n\n\n\n\n\nStandardmäßig erzeugt rnorm() standardnormalverteilte Zufallszahlen mit einem Mittelwert von \\(0\\) und einer Standardabweichung von \\(1\\). Der Mittelwert und die Standardabweichung können jedoch mit den Argumenten mean und sd geändert werden, wie oben dargestellt."
   },
   {
     "objectID": "Part_1.html#wichtige-funktionen-2",
     "href": "Part_1.html#wichtige-funktionen-2",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Wichtige Funktionen (2)",
     "text": "Wichtige Funktionen (2)\n\nMeistens wollen wir, dass unser Code genau denselben Satz von Zufallszahlen (re)produziert; dazu können wir die Funktion set.seed() verwenden. Die Funktion set.seed() benötigt ein (beliebiges) ganzzahliges Argument.\n\n\n\n\n\n\n\n\n\n\n\nSie sollten set.seed() immer dann nutzen, wenn Reproduzierbarkeit der Ergebnisse wichtig ist (also fast immer)."
   },
   {
     "objectID": "Part_1.html#wichtige-funktionen-3",
     "href": "Part_1.html#wichtige-funktionen-3",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Wichtige Funktionen (3)",
     "text": "Wichtige Funktionen (3)\n\nDie Funktionen mean() und var() berechnen den Mittelwert und die Varianz eines Vektors von Zahlen. Wendet man sqrt() auf die Ausgabe von var() an, erhält man die Standardabweichung, alternativ nutzen Sie die Funktion sd() ."
   },
   {
     "objectID": "Part_1.html#wichtige-funktionen-4",
     "href": "Part_1.html#wichtige-funktionen-4",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Wichtige Funktionen (4)",
     "text": "Wichtige Funktionen (4)\n\nDie Funktion seq() erstellt eine Folge (Sequenz) von Zahlen. Z.B. seq(a, b) erstellt einen Vektor von Ganzzahlen (Integer) zwischen a und b. Auch seq() hat viele mögliche Argumente: z.B. seq(0, 1, length = 10) erstellt eine Folge von 10 Zahlen mit gleichen Abständen zwischen 0 und 1. (Anmerkung: 3:11 ist kurz für seq(3, 11) für Ganzzahlen.)"
   },
   {
     "objectID": "Part_1.html#die-plot-funktion-1",
     "href": "Part_1.html#die-plot-funktion-1",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Die plot() Funktion (1)",
     "text": "Die plot() Funktion (1)\n\nDie plot() Funktion ist der einfachste (und direkteste) Weg Daten in R zu plotten. Z.B. plot(x, y) ergibt einen Scatterplot der Daten in x und y. Bitte beachten Sie, die plot() Funktion ist vor allem in der Analysephase wichtig und hilfreich. Die Abbildungen sind in der Regel nicht hübsch im Sinne von publikationsreif. Eine große Stärke von R ist es jedoch auch publikationsreife Abbildungen erstellen zu können. Im Regelfall verwenden Sie hierfür aber dann das Paket ggplot2.\nDas Erstellen von solchen Abbildungen wird später im Seminar ein eigener Schwerpunktblock sein."
   },
   {
     "objectID": "Part_1.html#die-plot-funktion-2",
     "href": "Part_1.html#die-plot-funktion-2",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Die plot() Funktion (2)",
     "text": "Die plot() Funktion (2)\n\nDie plot() Funktion bietet viele zusätzliche Optionen, z.B. das Argument xlab um die \\(x\\)-Achse zu beschriften. Wie immer finden Sie mehr Details via ?plot.\n\n\n\n\n\n\n\n\n\n\nBeachten Sie, oben haben wir Einrückungen genutzt, um den Code lesbarer zu machen. R erkennt (fast immer) automatisch ob ein Befehl der über mehrere Zeilen geht zusammenhängt. RStudio bietet Ihnen diese Einrückungen automatisch an. Es gibt auch Plug-Ins um diese explizit sichtbar zu machen."
   },
   {
     "objectID": "Part_1.html#die-plot-funktion-3",
     "href": "Part_1.html#die-plot-funktion-3",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Die plot() Funktion (3)",
     "text": "Die plot() Funktion (3)\n\nOft möchte man die Ausgabe eines R-Plots speichern. Der Befehl, den wir dafür verwenden, hängt von dem Dateityp ab, den wir erstellen möchten. Um zum Beispiel eine pdf-Datei zu erstellen, verwenden wir die Funktion pdf() und um ein jpeg zu erstellen, verwenden wir die Funktion jpeg().\n\n\n\n\n\n\n\n\n\n\nDie Funktion dev.off() zeigt R an, dass wir mit der Erstellung des Plot fertig sind (und dieser gespeichert wird). Alternativ können wir die Abbildung einfach kopieren und in ein Word-Dokument, eine Powerpoint-Präsentation etc., einfügen. Bitte beachten Sie: Der obige Code funktioniert nur in RStudio, nicht auf den Folien, da Sie in den Folien nicht speichern können."
   },
   {
     "objectID": "Part_1.html#daten-auswählen-1",
     "href": "Part_1.html#daten-auswählen-1",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Daten auswählen (1)",
     "text": "Daten auswählen (1)\n\nOft müssen wir nur einen Teil eines Datensatzes untersuchen. Nehmen wir an, unser Datensatz ist in der Matrix A gespeichert.\n\n\n\n\n\n\n\n\n\nDann kann via\n\n\n\n\n\n\n\n\ndas Element in der zweiten Reihe und dritten Spalte ausgewählt werden. Die erste Ziffer in der eckigen Klammer [ ] bezieht sich immer auf die Zeile und die zweite immer auf die Spalte. Wir können auch mehrere Zellen auswählen, indem wir den Sequenz-Operator von oben einsetzten."
   },
   {
     "objectID": "Part_1.html#daten-auswählen-2",
     "href": "Part_1.html#daten-auswählen-2",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Daten auswählen (2)",
     "text": "Daten auswählen (2)\n\n\n\n\n\n\n\n\n\n\n\nDie letzten beiden Beispiele enthalten entweder keinen Index für die Spalten oder keinen Index für die Zeilen. Das bedeutet, dass R alle Spalten oder alle Zeilen auswählen soll. R behandelt eine einzelne Spalte oder Zeile als Vektor."
   },
   {
     "objectID": "Part_1.html#daten-auswählen-3",
     "href": "Part_1.html#daten-auswählen-3",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Daten auswählen (3)",
     "text": "Daten auswählen (3)\n\nEin - Zeichen im Index weist R an, alle Reihen oder Spalten auszuwählen, außer den angegeben.\n\n\n\n\n\n\n\n\n\n\nÜber die dim() Funktion erfahren wir die Anzahl der Reihen gefolgt von der Anzahl der Spalten einer Matrix."
   },
   {
     "objectID": "Part_1.html#daten-auswählen-4",
     "href": "Part_1.html#daten-auswählen-4",
-    "title": "Teil I - Grundlagen",
+    "title": "Teil I - Erste Grundlagen",
     "section": "Daten auswählen (4)",
     "text": "Daten auswählen (4)\n\nBitte beachten Sie: Wenn Sie umfangreichere Datenoperationen durchführen wollen oder komplexere Variablen generieren wollen, ist es sinnvoll auf die Funktionalität der tidyverse (https://www.tidyverse.org) Pakete zurückzugreifen.\n\nWir werden hier im Kurs dazu ebenfalls einen Schwerpunkttermin machen."
   },
   {
-    "objectID": "Part_1.html#daten-auswählen-4-1",
-    "href": "Part_1.html#daten-auswählen-4-1",
-    "title": "Teil I - Grundlagen",
-    "section": "Daten auswählen (4)",
-    "text": "Daten auswählen (4)\n\n\n\n\n\n\n\n\n\n\n\n\nGitHub-Repo: https://github.com/dschnitzlein/GDSR_1_Part_1/"
+    "objectID": "Part_1.html#daten-von-externen-quellen-einladen-1",
+    "href": "Part_1.html#daten-von-externen-quellen-einladen-1",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Daten von externen Quellen einladen (1)",
+    "text": "Daten von externen Quellen einladen (1)\n\nFür die meisten Analysen ist der erste Schritt der Import eines neuen (externen) Datensatzes in R. Die Funktion read.table() ist eine wichtige (wenn auch nicht die einzige) Möglichkeit, dies zu tun. Wie immer finden Sie mehr Informationen unter ?read.table. Je nach Format des Datensatzes können/müssen Sie auch die Funktionen read.csv, read.excel oder heaven nutzen.\nBevor wir versuchen, einen Datensatz zu laden, müssen wir sicherstellen, dass R nach den Daten im richtigen Verzeichnis suchen kann. Die Einzelheiten der Vorgehensweise hängen jedoch vom verwendeten Betriebssystem (z. B. Windows, Mac, Linux) ab, so dass wir hier nicht weiter darauf eingehen.\nIn der Praxis ist es am einfachsten, wenn Sie den Datensatz beim ersten Mal via des Menüs in RStudio einlesen und sich den dabei generierten Code anzeigen lassen."
+  },
+  {
+    "objectID": "Part_1.html#daten-von-externen-quellen-einladen-2",
+    "href": "Part_1.html#daten-von-externen-quellen-einladen-2",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Daten von externen Quellen einladen (2)",
+    "text": "Daten von externen Quellen einladen (2)\n\nWir beginnen mit dem Laden des Datensatzes Auto.data. Um die Funktion read.table() zu veranschaulichen, laden wir diesen nun aus einer Textdatei, Auto.data, die Sie auf StudOn/Github finden.\nDer folgende Befehl lädt die Datei Auto.data in R und speichert sie als Objekt namens Auto in einem Format, das als DataFrame bezeichnet wird. Sobald die Daten geladen sind, kann die Funktion View() verwendet werden, um sie in einem Excel-ähnlichen Fenster in RStudio anzuzeigen. Alternativ können wir mit head() die ersten Zeilen anzeigen lassen.\n\n\n\n\n\n\n\n\n\nBeachten Sie, dass Auto.data einfach eine Textdatei ist, die Sie alternativ auf Ihrem Computer mit einem Standard-Texteditor öffnen können. Es ist oft eine gute Idee, einen Datensatz mit einem Texteditor oder einer anderen Software wie Excel anzusehen, bevor man ihn in R lädt."
+  },
+  {
+    "objectID": "Part_1.html#daten-von-externen-quellen-einladen-3",
+    "href": "Part_1.html#daten-von-externen-quellen-einladen-3",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Daten von externen Quellen einladen (3)",
+    "text": "Daten von externen Quellen einladen (3)\n\nDieser spezielle Datensatz wurde z.B. nicht korrekt geladen, weil R angenommen hat, dass die Variablennamen Teil der Daten sind und sie daher in die erste Zeile aufgenommen hat. Der Datensatz enthält auch eine Reihe fehlender Beobachtungen, die durch ein Fragezeichen ? gekennzeichnet sind. Fehlende Werte sind in realen Datensätzen häufig anzutreffen. Die Verwendung der Option header = T (oder header = TRUE) in der Funktion read.table() sagt R, dass die erste Zeile der Datei die Variablennamen enthält, und die Verwendung der Option na.strings sagt R, dass jedes Mal, wenn es ein bestimmtes Zeichen (z.B. ein Fragezeichen) sieht, dieses Element als fehlendes Element in der Datenmatrix behandelt werden soll."
+  },
+  {
+    "objectID": "Part_1.html#daten-von-externen-quellen-einladen-4",
+    "href": "Part_1.html#daten-von-externen-quellen-einladen-4",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Daten von externen Quellen einladen (4)",
+    "text": "Daten von externen Quellen einladen (4)\n\nDas Argument stringsAsFactors = T teilt R mit, dass jede Variable, die (nicht-numerische) Zeichen enthält, als qualitative Variable interpretiert werden soll und dass jede einzelne Zeichenkombination eine Einheit für diese qualitative Variable darstellt.\nMit der dim() Funktion können wir ermitteln, dass der Datensatz \\(397\\) Beobachtungen (Zeilen) und 9 Variablen (Spalten) hat."
+  },
+  {
+    "objectID": "Part_1.html#das-arbeitsverzeichnis",
+    "href": "Part_1.html#das-arbeitsverzeichnis",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Das Arbeitsverzeichnis",
+    "text": "Das Arbeitsverzeichnis\n\n…."
+  },
+  {
+    "objectID": "Part_1.html#erste-aufbereitung-fehlende-werte",
+    "href": "Part_1.html#erste-aufbereitung-fehlende-werte",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Erste Aufbereitung: Fehlende Werte",
+    "text": "Erste Aufbereitung: Fehlende Werte\n\nEs gibt verschiedene Wege mit fehlenden Werten umzugehen. In unserem Beispiel enthalten 5 Beobachtungen fehlende Werte. Daher nutzen wir die na.omit() Funktion und löschen diese Beobachtungen. Wir werden uns später im mit alternativen Wegen beschäftigen.\n\n\n\n\n\n\n\n\n\n\nWir können nun names() nutzen um die Variablennamen (Spaltennamen) anzuzeigen."
+  },
+  {
+    "objectID": "Part_1.html#grafische-zusammenfassung-1",
+    "href": "Part_1.html#grafische-zusammenfassung-1",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Grafische Zusammenfassung (1)",
+    "text": "Grafische Zusammenfassung (1)\n\nWie oben können wir die Funktion plot() verwenden, um Streudiagramme für die quantitativen Variablen zu erstellen. Die einfache Eingabe der Variablennamen führt jedoch zu einer Fehlermeldung, da R nicht weiß, wo diese Variablen gesucht werden sollen.\nUm auf eine Variable zu verweisen, müssen wir den Datensatz und den Variablennamen zusammen mit einem $-Symbol eingeben. Alternativ könnten wir die Funktion attach() verwenden, um R anzuweisen, die Variablen in diesem DataFrame nur über ihren Namen verfügbar zu machen. Das ist aber, speziell wenn man mit mehreren DataFrame gleichzeitig arbeitet, sehr fehleranfällig und sollte vermieden werden."
+  },
+  {
+    "objectID": "Part_1.html#grafische-zusammenfassung-2",
+    "href": "Part_1.html#grafische-zusammenfassung-2",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Grafische Zusammenfassung (2)",
+    "text": "Grafische Zusammenfassung (2)\n\nDie Variable cylinders ist als numerischer Vektor definiert, daher hat R sie auch so verwendet. Allerdings ist es hier inhaltlich sinnvoll cylinders als qualitative Variable zu verwenden (Faktor). Die Funktion as.factor() konvertiert quantitative Variablen in qualitative Variablen.\nWenn die angegebene Variable für die \\(x\\)-Achse qualitativ ist, dann gibt plot() automatisch Boxplots statt Streudiagramme aus. Wie immer gibt es unter ?plot() viele Optionen um die Abbildungen anzupassen."
+  },
+  {
+    "objectID": "Part_1.html#numerische-zusammenfassung",
+    "href": "Part_1.html#numerische-zusammenfassung",
+    "title": "Teil I - Erste Grundlagen",
+    "section": "Numerische Zusammenfassung",
+    "text": "Numerische Zusammenfassung\n\nMit der summary() Funktion können wir deskriptive Statistiken eines gesamten Datensatzes anzeigen lassen …\n\n\n\n\n\n\n\n\n\n\n… oder nur einer einzelnen Variablen.\n\n\n\n\n\n\n\n\n\n\n\nGitHub-Repo: https://github.com/dschnitzlein/GDSR_1_Part_1/"
   }
 ]
