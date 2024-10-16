@@ -1,0 +1,255 @@
+---
+title: "Teil I"
+subtitle: "Grundlagen der Datenanalyse und Statistik mit R | WS 2024/25"
+author: "Prof. Dr. Daniel Schnitzlein"
+footer: "GitHub-Repo: <https://github.com/dschnitzlein/GDSR_1_Part_1/>"
+engine: knitr
+format: 
+  live-revealjs:
+    theme: [default, custom.scss]
+    progress: true
+    width: 1400
+    title-slide-attributes:
+      data-background-color: "#2A4D69"
+      data-background-image: "/images/logo.png"
+      data-background-size: "30%"
+      data-background-position: "center right 20px"
+css: custom.css
+editor: visual
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+## Seminarablauf
+
+<br> <br>
+
+::: {.column width="65%"}
+| Datum              | Uhrzeit               |    Thema |
+|--------------------|:----------------------|---------:|
+| 18\. Oktober 2024  | 08:00 - 12:15 Uhr     | Termin 1 |
+| 22\. November 2024 | 08:00 - 12:15 Uhr     | Termin 2 |
+| 06\. Dezember 2024 | 08:00 - 12:15 Uhr     | Termin 3 |
+| 10\. Januar 2025   | 08:00 - 12:15 Uhr     | Termin 4 |
+| 17\. Januar 2025   | 08:00 - 10:00 Uhr (?) | Termin 5 |
+
+<br>
+:::
+
+Alle Termine finden **online** via **Zoom** statt. Der Link wird rechtzeitig vor dem jeweiligen Termin bereitgestellt. Nach jedem Termin wird es ein Problem Set (Hausaufgabe) geben, das bis zum nächsten Termin bearbeitet werden muss. Die Abgabe der Hausaufgaben ist Voraussetzung für die Bescheinigung der Kursteilnahme.
+
+## (Vorläufige) Themenliste
+
+<br>
+
+<div>
+
+1.  **Einführung in R und R-Studio:** **Überblick über die Installations- und Einrichtungsprozesse \| Grundlegende Funktionen und Bedienung von R und RStudio**
+2.  **Grundlagen der Statistiksprache R: Syntax und Datenstrukturen in R \| Einführung in Funktionen und Pakete**
+3.  Datenmanagement in R: Methoden der Datenorganisation und -vorbereitung \| Importieren, Bereinigen und Transformieren von Datensätzen
+4.  Einführung in die Pakete des tidyverse: Überblick über die wichtigsten tidyverse-Pakete wie z.B. dplyr und ggplot2 \| Anwendung dieser Pakete zur effizienten Datenanalyse und -visualisierung
+5.  Deskriptive Statistik in R: Berechnung und Interpretation grundlegender statistischer Kennzahlen \| Anwendung von deskriptiven Methoden zur Datenexploration \| Einführung in die statistische Modellierung am Beispiel linearer Modelle
+6.  Datenvisualisierung in R: Erstellen von publikationsreifen Grafiken und Diagrammen mit ggplot2 \| Gestaltung und Interpretation von Datenvisualisierungen zur Unterstützung der Datenanalyse
+
+</div>
+
+## Tagesablauf
+
+<br>
+
+<br>
+
+::: {.column width="100%"}
+| Uhrzeit       | Thema      | Thema | Raum            |
+|---------------|:-----------|------:|-----------------|
+| 08:00 - 09:30 | Block 1    |    NN | Hauptraum       |
+| 09:45 - 11:15 | Hands-On 1 |    NN | Break-Out Räume |
+| 11:30 - 12:15 | Block 2    |    NN | Hauptraum       |
+:::
+
+## RStudio ist die bevorzugte IDE für R
+
+![](images/Screen1.png){fig-align="center"}
+
+## R als Taschenrechner und Objekte
+
+<br>
+
+In der einfachsten Anwendung können Sie R im interaktiven Gebrauch als Taschenrechner nutzen:  
+
+```{webr}
+1 + 3
+```
+
+. . .
+
+Mit dem Operator `<-` weisen Sie `R` an, das Ergebnis des Ausdrucks der rechts des Operators steht in dem Objekt abzulegen (und ggf. das Objekt zu erzeugen), das links vom Operator steht.  
+
+```{webr}
+ergebnis <- 1 + 3
+```
+
+. . .
+
+In diesem Fall wird das Ergebnis von `1 + 3` in dem Objekt `ergebnis` abgelegt. Um den Inhalt eines Projekts anzuzeigen, müssen Sie (in den allermeisten Fällen) einfach den Namen des Objekts eingeben. Ist das Objekt komplexer (Modellergebnisse etc.) kann es sein, dass Sie explizit angeben müssen, dass das Objekt angezeigt werden soll `print(Objekt)`.
+
+## Funktionen
+
+<br>
+
+`R` verwendet *Funktionen* um Operationen durchzuführen. Um eine Funktion namens `Funktionsname` auszuführen, geben wir `Funktionsname(Eingabe1, Eingabe2, ...)` ein, wobei die Eingaben (oder *Argumente*) `Eingabe1` und `Eingabe2` `R` mitteilen, wie die Funktion ausgeführt werden soll. Eine Funktion kann eine beliebige Anzahl von Eingaben haben. Um zum Beispiel einen Zahlenvektor aus einzelnen Zahlen zu erzeugen, verwenden wir die Funktion `c()`, der alle Zahlen innerhalb der Klammern zusammenfügt.
+
+<br>
+
+Der folgende Befehl weist `R` an, die Zahlen 1, 3, 2 und 5 zusammenzufügen und als einen Vektor mit dem Namen `x` zu speichern. Wenn wir `x` eintippen, bekommen Sie den Vektor als Ergebnis angezeigt.
+
+```{webr}
+x <- c(1, 6, 2)
+x
+y <- c(1, 4, 3)
+y
+```
+
+## Wo bekomme ich Hilfe?
+
+<br>
+
+Wenn Sie mehr Informationen über eine bestimmte Funktion erfahren möchten, tippen Sie auf der Konsole `?Funktionsname` ein. Wir können `R` anweisen, zwei Zahlenvektoren zu addieren. `R` addiert dann die erste Zahl von `x` zur ersten Zahl von `y` und so weiter. Allerdings müssen `x` und `y` die gleiche Länge haben. Wir können ihre Länge mit der Funktion `length()` überprüfen.
+
+<br>
+
+```{webr}
+length(x)
+length(y)
+x + y
+```
+
+## Objekte
+
+<br>
+
+`R` arbeitet mit Objekten. Mit der Funktion `ls()` können wir eine Liste aller bisher geladenen Objekte, wie z.B. Daten und Funktionen, anzeigen. Mit der Funktion `rm()` kann man alle Objekte löschen, die nicht mehr benötigt werden. Dies kann u.a. zur Speicheroptimierung sehr hilfreich sein.
+
+```{webr}
+ls()
+rm(x, y)
+ls()
+```
+
+. . .
+
+Sie können auch alle Objekte auf einmal löschen.
+
+```{webr}
+rm(list = ls())
+```
+
+## Matrizen
+
+<br>
+
+Die `matrix()` Funktion erstellt eine Matrix von Zahlen. Das Hilfe-File (`?matrix`) listet, dass die Funktion eine ganze Reihe von Argumenten akzeptiert. Wir fokussieren allerdings auf die ersten drei: Die Daten (Einträge in der Matrix), die Anzahl der Zeilen und die Anzahl der Spalten. Wir starten mit einer einfachen Matrix.
+
+```{webr}
+x <- matrix(data = c(1, 2, 3, 4), nrow = 2, ncol = 2)
+x
+```
+
+<br>
+
+**Hinweis:** Die Zusätze `data=`, `nrow=`, und `ncol=` in der `matrix()` Funktion sind nicht unbedingt notwendig aber machen den Code lesbarer. Probieren Sie es einfach aus!
+
+## Reihenfolge der Argumente in einer Funktion
+
+<br>
+
+Oft kann es allerdings hilfreich sein, die Namen der übergebenen Argumente anzugeben, da `R` sonst davon ausgeht, dass die Funktionsargumente in der gleichen Reihenfolge an die
+Funktion übergeben werden, wie sie in der Hilfedatei der Funktion angegeben sind. Im obigen Beispiel erstellt `R` standardmäßig Matrizen, indem es nacheinander die Spalten ausfüllt. Alternativ kann die Option `byrow = TRUE` verwendet werden, um die Matrix in der Reihenfolge der Zeilen aufzufüllen.
+
+<br>
+
+Probieren Sie es aus:
+
+```{webr}
+matrix(data = c(1, 2, 3, 4), . . .)
+
+```
+
+. . .
+
+<br>
+
+Beachten Sie, dass wir im obigen Befehl die Matrix nicht einem Objekt wie `x` zugewiesen haben. In diesem Fall wird die Matrix auf dem Bildschirm ausgegeben, aber nicht für zukünftige Berechnungen gespeichert.
+
+## Wichtige Funktionen (1)
+
+<br>
+
+Die Funktion `rnorm()` erzeugt einen Vektor von standardnormalverteilten Zufallszahlen, wobei das erste Argument `n` der Stichprobenumfang ist. Jedes Mal wenn wir diese Funktion aufrufen, erhalten wir eine andere Antwort. Hier bilden wir zwei korrelierte Mengen von Zahlen, `x` und `y`, und verwenden die Funktion `cor()`, um die Korrelation zwischen
+ihnen zu berechnen. Wenn Sie den Code mehrfach ausführen, sehen Sie, dass sich die Ergebnisse verändern.
+
+<br>
+
+```{webr}
+x <- rnorm(50)
+y <- x + rnorm(50, mean = 50, sd = .1)
+cor(x, y)
+```
+
+Standardmäßig erzeugt `rnorm()` standardnormalverteilte Zufallszahlen mit einem Mittelwert von $0$ und einer Standardabweichung von $1$. Der Mittelwert und die Standardabweichung können jedoch mit den Argumenten `mean` und `sd` geändert werden, wie oben dargestellt. 
+
+## Wichtige Funktionen (2)
+
+<br>
+
+Meistens wollen wir, dass unser Code genau denselben Satz von Zufallszahlen (re)produziert; dazu können wir die Funktion `set.seed()` verwenden. Die Funktion `set.seed()` benötigt ein (beliebiges) ganzzahliges Argument.
+
+<br>
+
+```{webr}
+set.seed(42)
+x <- rnorm(50)
+y <- x + rnorm(50, mean = 50, sd = .1)
+cor(x, y)
+```
+
+. . .
+
+<br>
+
+Sie sollten `set.seed()` immer dann nutzen, wenn Reproduzierbarkeit der Ergebnisse wichtig ist (also fast immer).
+
+## Wichtige Funktionen (3)
+
+<br>
+
+Die Funktionen `mean()` und `var()` berechnen den Mittelwert und die Varianz eines Vektors von Zahlen. Wendet man `sqrt()` auf die Ausgabe
+von `var()` an, erhält man die Standardabweichung, alternativ nutzen Sie die Funktion `sd()` .
+
+<br>
+
+```{webr}
+set.seed(42)
+y <- rnorm(100)
+mean(y)
+var(y)
+sqrt(var(y))
+sd(y)
+```
+
+## Wichtige Funktionen (4)
+
+<br>
+
+Die Funktion `seq()` erstellt eine Folge (Sequenz) von Zahlen. Z.B. `seq(a, b)` erstellt einen Vektor von Ganzzahlen (Integer) zwischen `a` und `b`. Auch `seq()` hat viele mögliche Argumente: z.B. `seq(0, 1, length = 10)` erstellt eine Folge von `10` Zahlen mit gleichen Abständen zwischen `0` und `1`. **Anmerkung:** `3:11` ist kurz für `seq(3, 11)` für Ganzzahlen.
+
+<br>
+
+```{webr}
+x <- seq(1, 10)
+x
+x <- 1:10
+x
+x <- seq(-pi, pi, length = 50)
+x
+```
