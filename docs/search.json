@@ -18,7 +18,7 @@
     "href": "Part_1.html#tagesablauf",
     "title": "Teil I - Erste Grundlagen",
     "section": "Tagesablauf",
-    "text": "Tagesablauf\n\n\n\n\n\n\nUhrzeit\nTitel\nThema\nRaum\n\n\n\n\n08:00 - 09:30\nBlock 1\nTeil I\nHauptraum\n\n\n09:45 - 11:15\nBlock 2\nTeil I / Übung I\nBreak-Out Räume\n\n\n11:30 - 12:15\nBlock 3\nÜbung I\nHauptraum"
+    "text": "Tagesablauf\n\n\n\n\n\n\nUhrzeit\nTitel\nThema\nRaum\n\n\n\n\n08:00 - 09:30\nBlock 1\nTeil I\nHauptraum\n\n\n09:45 - 11:15\nBlock 2\nTeil I / Übung I\nBreak-Out Räume\n\n\n11:30 - 12:15\nBlock 3\nÜbung I\nHauptraum\n\n\n\n\nDie heutige Einführung ist eine Adaption (und Übersetzung) des Einstiegslabs zu R aus dem Lehrbuch An Introduction to Statistical Learning - with Applications in R von James et al. Das E-Book aus dem Springerverlag können Sie hier herunterladen: https://www.statlearning.com/."
   },
   {
     "objectID": "Part_1.html#rstudio-ist-die-bevorzugte-ide-für-r",

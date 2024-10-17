@@ -69,6 +69,10 @@ Alle Termine finden **online** via **Zoom** statt. Der Link wird rechtzeitig vor
 | 11:30 - 12:15 | Block 3 |          Übung I | Hauptraum       |
 :::
 
+::: aside
+Die heutige Einführung ist eine Adaption (und Übersetzung) des Einstiegslabs zu R aus dem Lehrbuch *An Introduction to Statistical Learning - with Applications in R* von James et al. Das E-Book aus dem Springerverlag können Sie hier herunterladen: <https://www.statlearning.com/>.
+:::
+
 ## RStudio ist die bevorzugte IDE für R
 
 ![](images/Screen1.png){fig-align="center"}
